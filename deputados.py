@@ -16,16 +16,23 @@ if partido:
     mulheres_2018 = df_2018[
         (df_2018['partido'].astype(str).str.upper() == partido.upper()) &
         (df_2018['sexo'].astype(str).str.upper() == 'F')
-        st.dataframe(resultado[['nome', 'partido', 'ano']])
     ]
 
     mulheres_2022 = df_2022[
         (df_2022['partido'].astype(str).str.upper() == partido.upper()) &
         (df_2022['sexo'].astype(str).str.upper() == 'F')
-        st.dataframe(resultado[['nome', 'partido', 'ano']])
     ]
 
+    mulheres_2018['ano'] = '2018'
+    mulheres_2022['ano'] = '2022'
+
     resultado = pd.concat([mulheres_2018, mulheres_2022])
+    st.dataframe(resultado[['nome', 'partido', 'ano']])
+
+    total = len(resultado)
+    st.success(f"Existem {total} mulheres no partido {partido.upper()}")
+    resultado = pd.concat([mulheres_2018])
+    resultado = pd.concat([mulheres_2022])
 
     st.dataframe(resultado)
 
