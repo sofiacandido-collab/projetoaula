@@ -16,11 +16,13 @@ if partido:
     mulheres_2018 = df_2018[
         (df_2018['partido'].astype(str).str.upper() == partido.upper()) &
         (df_2018['sexo'].astype(str).str.upper() == 'F')
+        st.dataframe(resultado[['nome', 'partido', 'ano']])
     ]
 
     mulheres_2022 = df_2022[
         (df_2022['partido'].astype(str).str.upper() == partido.upper()) &
         (df_2022['sexo'].astype(str).str.upper() == 'F')
+        st.dataframe(resultado[['nome', 'partido', 'ano']])
     ]
 
     resultado = pd.concat([mulheres_2018, mulheres_2022])
@@ -41,3 +43,4 @@ ax.set_title('Número de mulheres eleitas')
 ax.set_ylabel('Quantidade')
 
 st.pyplot(fig)
+
