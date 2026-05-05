@@ -16,4 +16,6 @@ partido = st.text_input('Digite a sigla do partido: ')
 
 if partido:
   filtrado = df[df['partido'].str.upper() == partido.upper()]
-  st.dataframe(filtrado)
+  filtrado2 = df[df['sexo'].str.upper() == sexo.upper()]
+  st.dataframe(filtrado + filtrado2)
+  
