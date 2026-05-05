@@ -14,3 +14,6 @@ st.dataframe(df)
 st.title('Buscador de deputadas por partido: ')
 partido = st.text_input('Digite a sigla do partido: ')
 
+if partido:
+  filtrado = df[df['partido'].str.upper() == patido.upper()]
+  st.dataframe(filtrado)
