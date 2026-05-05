@@ -31,23 +31,9 @@ if partido:
 
     total = len(resultado)
     st.success(f"Existem {total} mulheres no partido {partido.upper()}")
-    resultado = pd.concat([mulheres_2018])
-    resultado = pd.concat([mulheres_2022])
+   
 
     st.dataframe(resultado)
 
     total = len(resultado)
     st.success(f"Existem {total} mulheres no partido {partido.upper()} (2018 + 2022)")
-
-st.header("Total de mulheres eleitas")
-
-total_2018 = len(df_2018[df_2018['sexo'].str.upper() == 'F'])
-total_2022 = len(df_2022[df_2022['sexo'].str.upper() == 'F'])
-
-fig, ax = plt.subplots()
-ax.bar(['2018', '2022'], [total_2018, total_2022])
-ax.set_title('Número de mulheres eleitas')
-ax.set_ylabel('Quantidade')
-
-st.pyplot(fig)
-
