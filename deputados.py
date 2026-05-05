@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 
 st.title("Comparador de Deputadas (2018 vs 2022)")
 df_2018 = pd.read_csv('deputados_2018 (1).csv')
