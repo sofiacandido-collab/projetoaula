@@ -31,9 +31,3 @@ if partido:
 
     total = len(resultado)
     st.success(f"Existem {total} mulheres no partido {partido.upper()}")
-   
-
-    st.dataframe(resultado)
-
-    total = len(resultado)
-    st.success(f"Existem {total} mulheres no partido {partido.upper()} (2018 + 2022)")
