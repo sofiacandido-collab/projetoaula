@@ -10,3 +10,7 @@ st.dataframe(df2)
 st.write("Deputados de 2022")
 df = pd.read_csv('deputados_2022.csv')
 st.dataframe(df)
+
+st.title('Buscador de deputadas por partido: ')
+partido = st.text_input('Digite a sigla do partido: ')
+
