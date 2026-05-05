@@ -1,4 +1,2 @@
 import pandasas pd
-
-df = pd.read_csv('data.csv')
-print(df.head())
+df = pd.read_csv('deputados_2022.csv')
